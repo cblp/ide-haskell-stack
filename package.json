@@ -2,7 +2,7 @@
   "name": "ide-haskell-stack",
   "main": "./lib/ide-haskell-stack",
   "version": "0.0.2",
-  "description": "Provides Cabal backend for ide-haskell",
+  "description": "Provides Stack backend for ide-haskell",
   "keywords": [
     "ide-haskell",
     "ide",
