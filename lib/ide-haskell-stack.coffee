@@ -1,4 +1,23 @@
 module.exports =
+  config:
+    globalArguments:
+      type: 'array'
+      description: 'Global stack arguments (comma-separated)'
+      default: []
+      order: 10
+
+    buildArguments:
+      type: 'array'
+      description: 'Stack build command arguments (comma-separated)'
+      default: []
+      order: 20
+
+    testArguments:
+      type: 'array'
+      description: 'Stack test command arguments (comma-separated)'
+      default: []
+      order: 30
+
   subscriptions: null
 
   activate: (@state) ->

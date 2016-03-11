@@ -35,7 +35,9 @@ class IdeBackend
         file.isFile() and file.getBaseName().endsWith '.cabal'
 
     if cabalFile?
-      cabalArgs = [cmd]
+      cabalArgs = atom.config.get('ide-haskell-stack.globalArguments')
+      cabalArgs.push cmd
+      cabalArgs.push (atom.config.get("ide-haskell-stack.#{cmd}Arguments") ? [])...
       CabalProcess ?= require './cabal-process'
       cabalProcess = new CabalProcess 'stack', cabalArgs, @spawnOpts(cabalRoot), opts
     else
